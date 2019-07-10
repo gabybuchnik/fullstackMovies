@@ -1,0 +1,6 @@
+<img src="./assets/images/{{movie.imgUrl}}">
+<div class="movie-wrapper">
+  <h3 class="movie-title">{{movie.title}}</h3>
+  <h4 class="movie-desc">{{movie.desc}}</h4>
+  <a routerLink="movie/{{movie.title}}" [hidden]="hidden">Go To Page</a>
+</div>

@@ -1,5 +1,5 @@
 export interface movie{
-    imgSrc : string;
+    imgUrl : string;
     title : string;
     desc : string;
 }

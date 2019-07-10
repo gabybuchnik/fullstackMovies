@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { PaintAladinDirective } from './directives/paint-aladin.directive';
+import { MovieComponent } from './components/movie/movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviesComponent,
-    PaintAladinDirective
+    PaintAladinDirective,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
