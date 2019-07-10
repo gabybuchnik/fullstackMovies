@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {movie} from '../../models/movies.model';
+import {MoviesService} from '../../services/movies.service';
 
 @Component({
   selector: 'app-movies',
@@ -6,15 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-  movies: any[];
-  constructor() {
+  movies: movie[];
+  constructor(private moviesService : MoviesService) {
     this.movies = [];
   }
 
   async ngOnInit() {
-    const res = await fetch('http://localhost:8000/home/movies');
-    const data = await res.json();
-    this.movies = data;
+    this.movies = await this.moviesService.getMovies();
   }
 
 }

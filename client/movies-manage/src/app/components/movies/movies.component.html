@@ -1,6 +1,6 @@
 <div *ngIf="movies">
   <h1>Movies</h1>
-  <div *ngFor="let movie of movies" class="movie">
+  <div *ngFor="let movie of movies" class="movie" appPaintAladin>
     <img src="../../../assets/images/{{movie.imgUrl}}">
     <div class="movie-wrapper">
         <h3 class="movie-title">{{movie.title}}</h3>

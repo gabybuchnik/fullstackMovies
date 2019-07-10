@@ -10,8 +10,9 @@ MongoClient.connect(url, (err, dbs) => {
         const db = dbs.db(dbName);
         const collectionName = 'movies';
         const data = await db.collection(collectionName).find({}).toArray();
-        res.send(data);
-        db.close();
+        if(data.length > 0){
+            res.send(data);
+        }
     })
 });
 
